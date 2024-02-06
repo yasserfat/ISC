@@ -3,7 +3,7 @@ import { useState } from 'react';
 import React from 'react'
 
 function NavBar(props) {
-    const Navs = ["Home", "About", "Event X Workshop"]
+    const Navs = ["Home", "About", "Events X Workshops"]
     // const Navs = props.Navs;
     const [isActive, setIsActive] = useState(false);
     const handleClick = event => {
@@ -47,7 +47,7 @@ function NavBar(props) {
                 <ul id="navlist">
                     <>
                         {Navs.map((content, i) => (
-                            <li key={i}><a href={`#${content}`}>{content}</a></li>
+                            <li key={i}><a href={content === "Events X Workshops" ? "#Events": `#${content}`}>{content}</a></li>
                         ))}
                     </>
 
